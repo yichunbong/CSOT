@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{ACF14516-A304-4AE5-93E6-F8E1F03CF242};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{1EA45529-4A23-42F4-A7E8-687B4744BCB5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSOT.Lcd.Scheduling</RootNamespace>
+    <AssemblyName>CSOT.Lcd.Scheduling</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <MozartBaseLibrary>SeePlan.Lcd</MozartBaseLibrary>
+    <MozartProjectPrefix>Fab</MozartProjectPrefix>
+    <MozartLicType>APS</MozartLicType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Program Files (x86)\VMS\Mozart\Bin\APS_Studio.exe</StartProgram>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mozart.Common, Version=2019.116.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Core, Version=2019.116.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Data, Version=2019.116.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Data.Entity, Version=2019.116.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.DataActions, Version=2019.116.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.DataActions.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Distributions, Version=2019.116.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Distributions.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.RuleFlow, Version=2019.116.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.RuleFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.SeePlan, Version=2019.116.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.SeePlan.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.SeePlan.Lcd">
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.SeePlan.Lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Simulation.Engine, Version=2019.116.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Simulation.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Simulation.EnterpriseLibrary, Version=2019.116.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Simulation.EnterpriseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Task.Execution, Version=2019.116.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Task.Execution.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Task.Framework, Version=2019.116.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Task.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Generated\LcdModel.0.cs" />
+    <Compile Include="Generated\LcdModel.Inputs.cs" />
+    <Compile Include="Generated\LcdModel.Outputs.cs" />
+    <Compile Include="Generated\LcdModel.Persists.cs" />
+    <Compile Include="Generated\Main.0.cs" />
+    <Compile Include="Generated\My Objects.0.cs" />
+    <Compile Include="Generated\My Objects.DataModel.cs" />
+    <Compile Include="Generated\My Objects.Inputs.cs" />
+    <Compile Include="Generated\Pegging.0.cs" />
+    <Compile Include="Generated\Simulation.0.cs" />
+    <Compile Include="Logic\Main.cs" />
+    <Compile Include="Logic\Pegging\APPLY_YIELD.cs" />
+    <Compile Include="Logic\Pegging\BUILD_INPLAN.cs" />
+    <Compile Include="Logic\Pegging\Cell.cs" />
+    <Compile Include="Logic\Pegging\CellBank.cs" />
+    <Compile Include="Logic\Pegging\CHANGE_PART.cs" />
+    <Compile Include="Logic\Pegging\Fab.cs" />
+    <Compile Include="Logic\Pegging\PEG_WIP.cs" />
+    <Compile Include="Logic\Pegging\PREPARE_TARGET.cs" />
+    <Compile Include="Logic\Pegging\PREPARE_WIP.cs" />
+    <Compile Include="Logic\Pegging\Rules.cs" />
+    <Compile Include="Logic\Pegging\SHIFT_TAT.cs" />
+    <Compile Include="Logic\Pegging\WRITE_TARGET.cs" />
+    <Compile Include="Logic\Pegging\WRITE_UNPEG.cs" />
+    <Compile Include="Logic\PersistInputs.cs" />
+    <Compile Include="Logic\PersistInputs.Ext.cs" />
+    <Compile Include="Logic\PersistOutputs.cs" />
+    <Compile Include="Logic\Simulation\BucketControl.cs" />
+    <Compile Include="Logic\Simulation\CFReleaseControl.cs" />
+    <Compile Include="Logic\Simulation\CustomEvents_CalcInflowProfile.cs" />
+    <Compile Include="Logic\Simulation\CustomEvents_OnHour.cs" />
+    <Compile Include="Logic\Simulation\CustomEvents_OnHour_New.cs" />
+    <Compile Include="Logic\Simulation\CustomEvents_WakeupFrontEqp.cs" />
+    <Compile Include="Logic\Simulation\DispatcherControl.cs" />
+    <Compile Include="Logic\Simulation\DownControl.cs" />
+    <Compile Include="Logic\Simulation\EqpEvents.cs" />
+    <Compile Include="Logic\Simulation\EqpInit.cs" />
+    <Compile Include="Logic\Simulation\FactoryEvents.cs" />
+    <Compile Include="Logic\Simulation\FactoryInit.cs" />
+    <Compile Include="Logic\Simulation\FilterControl.cs" />
+    <Compile Include="Logic\Simulation\ForwardPeg.cs" />
+    <Compile Include="Logic\Simulation\InOutControl.cs" />
+    <Compile Include="Logic\Simulation\InputBatchInit.cs" />
+    <Compile Include="Logic\Simulation\Misc.cs" />
+    <Compile Include="Logic\Simulation\ProcessControl.cs" />
+    <Compile Include="Logic\Simulation\QueueControl.cs" />
+    <Compile Include="Logic\Simulation\Route.cs" />
+    <Compile Include="Logic\Simulation\SetupControl.cs" />
+    <Compile Include="Logic\Simulation\Statistics_LoadHistory.cs" />
+    <Compile Include="Logic\Simulation\ToolControl.cs" />
+    <Compile Include="Logic\Simulation\ToolEvents.cs" />
+    <Compile Include="Logic\Simulation\TransferControl.cs" />
+    <Compile Include="Logic\Simulation\Weights.cs" />
+    <Compile Include="Logic\Simulation\WipInit.cs" />
+    <Compile Include="Main.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main.vxml</DependentUpon>
+    </Compile>
+    <Compile Include="My Methods\BOP\BopBuilder.cs" />
+    <Compile Include="My Methods\BOP\BopHelper.cs" />
+    <Compile Include="My Methods\BOP\ProdHelper.cs" />
+    <Compile Include="My Methods\Common\CompareHelper.cs" />
+    <Compile Include="My Methods\Common\ConfigHelper.cs" />
+    <Compile Include="My Methods\Common\CreateHelper.cs" />
+    <Compile Include="My Methods\Common\LcdHelper.cs" />
+    <Compile Include="My Methods\Common\SiteConfigHelper.cs" />
+    <Compile Include="My Methods\Custom\FabPMSchedule.cs" />
+    <Compile Include="My Methods\Custom\FabWeightFactor.cs" />
+    <Compile Include="My Methods\InFlow\InFlowAgent.cs" />
+    <Compile Include="My Methods\InFlow\InflowManager.cs" />
+    <Compile Include="My Methods\InFlow\InFlowMaster.cs" />
+    <Compile Include="My Methods\InFlow\JobState.cs" />
+    <Compile Include="My Methods\InFlow\JobState_WipProfile.cs" />
+    <Compile Include="My Methods\InFlow\WipProfile.cs" />
+    <Compile Include="My Methods\Master\AcidMaster.cs" />
+    <Compile Include="My Methods\Master\BranchStepMaster.cs" />
+    <Compile Include="My Methods\Master\CellCodeMaster.cs" />
+    <Compile Include="My Methods\Master\ChamberMaster.cs" />
+    <Compile Include="My Methods\Master\DownMaster.cs" />
+    <Compile Include="My Methods\Master\EqpArrangeMaster.cs" />
+    <Compile Include="My Methods\Master\FilterMaster.cs" />
+    <Compile Include="My Methods\Master\HoldMaster.cs" />
+    <Compile Include="My Methods\Master\InLineMapMaster.cs" />
+    <Compile Include="My Methods\Master\InOutProfileMaster.cs" />
+    <Compile Include="My Methods\Master\JigMaster.cs" />
+    <Compile Include="My Methods\Master\MaskMaster.cs" />
+    <Compile Include="My Methods\Master\PegMaster.cs" />
+    <Compile Include="My Methods\Master\ReleasePlanMaster.cs" />
+    <Compile Include="My Methods\Master\SetupMaster.cs" />
+    <Compile Include="My Methods\Master\QTimeMaster.cs" />
+    <Compile Include="My Methods\Master\TransferMaster.cs" />
+    <Compile Include="My Methods\MyObjectExts\Common\FabProductExt.cs" />
+    <Compile Include="My Methods\MyObjectExts\Common\FabStdStepExt.cs" />
+    <Compile Include="My Methods\MyObjectExts\Common\FabStepExt.cs" />
+    <Compile Include="My Methods\MyObjectExts\Pegging\PegPartExt.cs" />
+    <Compile Include="My Methods\MyObjectExts\Simulation\FabEquipmentExt.cs" />
+    <Compile Include="My Methods\MyObjectExts\Simulation\FabLotExt.cs" />
+    <Compile Include="My Methods\Pegging\PegHelper.cs" />
+    <Compile Include="My Methods\Simulation\DebugHelper.cs" />
+    <Compile Include="My Methods\Simulation\DispatchLogHelper.cs" />
+    <Compile Include="My Methods\Simulation\EntityHelper.cs" />
+    <Compile Include="My Methods\Simulation\FilterHelper.cs" />
+    <Compile Include="My Methods\Simulation\LoadHelper.cs" />
+    <Compile Include="My Methods\Simulation\ResHelper.cs" />
+    <Compile Include="My Methods\Simulation\OutCollector.cs" />
+    <Compile Include="My Methods\Simulation\SimHelper.cs" />
+    <Compile Include="My Methods\Common\TextHelper.cs" />
+    <Compile Include="My Methods\Common\TimeHelper.cs" />
+    <Compile Include="My Methods\Simulation\WeightHelper.cs" />
+    <Compile Include="My Methods\Simulation\WipCollector.cs" />
+    <Compile Include="My Methods\System\CustomDownloadMonitor.cs" />
+    <Compile Include="My Methods\System\CustomUploadMonitor.cs" />
+    <Compile Include="My Methods\System\ErrHist.cs" />
+    <Compile Include="My Methods\System\RunStateMasterFunc.cs" />
+    <Compile Include="Simulation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Simulation.vxml</DependentUpon>
+    </Compile>
+    <None Include="LcdModel.vxml">
+      <Generator>MozartCode</Generator>
+      <LastGenOutput>LcdModel.cs</LastGenOutput>
+    </None>
+    <None Include="Main.vxml">
+      <Generator>MozartCode</Generator>
+      <LastGenOutput>Main.cs</LastGenOutput>
+    </None>
+    <Compile Include="LcdModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LcdModel.vxml</DependentUpon>
+    </Compile>
+    <Compile Include="My Objects.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>My Objects.vxml</DependentUpon>
+    </Compile>
+    <Compile Include="Pegging.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pegging.vxml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="My Objects.vxml">
+      <Generator>MozartCode</Generator>
+      <LastGenOutput>My Objects.cs</LastGenOutput>
+    </None>
+    <None Include="Pegging.vxml">
+      <Generator>MozartCode</Generator>
+      <LastGenOutput>Pegging.cs</LastGenOutput>
+    </None>
+    <None Include="Simulation.vxml">
+      <Generator>MozartCode</Generator>
+      <LastGenOutput>Simulation.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>set PROCESSOR_ARCHITEW6432
+if ERRORLEVEL 1 GOTO x86
+if NOT ERRORLEVEL 1 GOTO x64
+
+:x86
+xcopy "$(TargetDir)$(ProjectName).*" "C:\Program Files\VMS\Mozart\Client\Bin\" /D /C /V /Y /R
+xcopy "$(ProjectDir)Generated\*.Schema.dll" "C:\Program Files (x86)\VMS\Client\Mozart\Bin\" /D /C /V /Y /R
+xcopy "$(TargetDir)$(ProjectName).*" "D:\Project\UPDATE_BIN\" /D /C /V /Y /R
+xcopy "$(ProjectDir)Generated\*.vmodel" "C:\Project\UPDATE_BIN\" /D /C /V /Y /R
+GOTO end
+
+:x64
+xcopy "$(TargetDir)$(ProjectName).*" "C:\Program Files\VMS\Mozart\Client\Bin\" /D /C /V /Y /R
+xcopy "$(ProjectDir)Generated\*.Schema.dll" "C:\Program Files (x86)\VMS\Mozart\Client\Bin\" /D /C /V /Y /R
+xcopy "$(TargetDir)$(ProjectName).*" "C:\Project\UPDATE_BIN\" /D /C /V /Y /R
+xcopy "$(ProjectDir)Generated\*.vmodel" "C:\Project\UPDATE_BIN\" /D /C /V /Y /R
+GOTO end
+
+:end</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

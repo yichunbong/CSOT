@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vxml:Document xmlns:vxml="http://www.vms-solutions.com/mozart/vxml/2012/1" xmlns:def="definitions" xmlns:ref="references" ContentType="dataclass" ContentKey="My Objects" xmlns="Mozart.Task.Execution.Design, Version=2019.116.0.61, Culture=neutral, PublicKeyToken=null" xmlns:ctm="clr-namespace:Mozart.Task.Model;assembly:Mozart.Task.Model, Version=2019.116.0.61, Culture=neutral, PublicKeyToken=null" xmlns:cdm="clr-namespace:Mozart.DataActions.Metadata;assembly:Mozart.DataActions, Version=2019.116.0.61, Culture=neutral, PublicKeyToken=null">
+  <Content>
+    <FDataClassRoot Name="My Objects">
+      <DataMarts>
+        <FDataMarts Name="DataMarts">
+          <Children Capacity="4">
+            <FDataMartRoot Name="InputMart">
+              <Children Capacity="8">
+                <FDataMartFolder Name="My Objects">
+                  <Children Capacity="4">
+                    <FDataMartFolder Name="Items" />
+                  </Children>
+                </FDataMartFolder>
+                <FDataMartObject Name="Dashboard" DataType="custom.DashboardMaster" />
+                <FDataMartObject Name="RunStateMst" DataType="custom.RunStateMaster" />
+              </Children>
+            </FDataMartRoot>
+          </Children>
+        </FDataMarts>
+      </DataMarts>
+      <Constants>
+        <FConstantItem Name="Constants">
+          <ArgumentArray>
+            <ctm:ArgumentInfo-Array>
+              <ctm:ArgumentInfo Category="Outputs" Name="Out_JobRunState" TypeEnum="String">
+                <InitialValue>
+                  <String>JobRunState</String>
+                </InitialValue>
+              </ctm:ArgumentInfo>
+              <ctm:ArgumentInfo Category="Action" Name="Insert" TypeEnum="String">
+                <InitialValue>
+                  <String>Insert</String>
+                </InitialValue>
+              </ctm:ArgumentInfo>
+              <ctm:ArgumentInfo Category="Action" Name="Update" TypeEnum="String">
+                <InitialValue>
+                  <String>Update</String>
+                </InitialValue>
+              </ctm:ArgumentInfo>
+              <ctm:ArgumentInfo Category="Action" Name="Default" TypeEnum="String">
+                <InitialValue>
+                  <String>Default</String>
+                </InitialValue>
+              </ctm:ArgumentInfo>
+            </ctm:ArgumentInfo-Array>
+          </ArgumentArray>
+        </FConstantItem>
+      </Constants>
+      <Enums>
+        <FDataClassFolder Name="Enums">
+          <Children Capacity="8">
+            <FDataClassItem Name="RunStateType" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="RunStateType">
+                  <Properties>
+                    <cdm:PropertyMeta Name="P" PropertyType="" />
+                    <cdm:PropertyMeta Name="C" PropertyType="" />
+                    <cdm:PropertyMeta Name="F" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="InboudRunType" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="InboudRunType">
+                  <Properties>
+                    <cdm:PropertyMeta Name="ENG_RUN" PropertyType="" />
+                    <cdm:PropertyMeta Name="INBOUND_IF" PropertyType="" />
+                    <cdm:PropertyMeta Name="NONE" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="InOutType" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="InOutType">
+                  <Properties>
+                    <cdm:PropertyMeta Name="IN" PropertyType="" />
+                    <cdm:PropertyMeta Name="OUT" PropertyType="" />
+                    <cdm:PropertyMeta Name="NONE" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="PMType" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="PMType">
+                  <Properties>
+                    <cdm:PropertyMeta Name="Full" PropertyType="" />
+                    <cdm:PropertyMeta Name="Component" PropertyType="" />
+                    <cdm:PropertyMeta Name="NONE" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="ToolType" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="ToolType">
+                  <Properties>
+                    <cdm:PropertyMeta Name="MASK" PropertyType="" />
+                    <cdm:PropertyMeta Name="NONE" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="ChamberType" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="ChamberType">
+                  <Properties>
+                    <cdm:PropertyMeta Name="Chamber" PropertyType="" />
+                    <cdm:PropertyMeta Name="ParallelChamber" PropertyType="" />
+                    <cdm:PropertyMeta Name="NONE" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="CodeMapType" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="CodeMapType">
+                  <Properties>
+                    <cdm:PropertyMeta Name="NONE" PropertyType="">
+                      <DefaultValue>
+                        <String>0</String>
+                      </DefaultValue>
+                    </cdm:PropertyMeta>
+                    <cdm:PropertyMeta Name="SHIP" PropertyType="">
+                      <DefaultValue>
+                        <String>1</String>
+                      </DefaultValue>
+                    </cdm:PropertyMeta>
+                    <cdm:PropertyMeta Name="STB1" PropertyType="">
+                      <DefaultValue>
+                        <String>2</String>
+                      </DefaultValue>
+                    </cdm:PropertyMeta>
+                    <cdm:PropertyMeta Name="PAIR" PropertyType="">
+                      <DefaultValue>
+                        <String>3</String>
+                      </DefaultValue>
+                    </cdm:PropertyMeta>
+                    <cdm:PropertyMeta Name="ASSY" PropertyType="">
+                      <DefaultValue>
+                        <String>4</String>
+                      </DefaultValue>
+                    </cdm:PropertyMeta>
+                    <cdm:PropertyMeta Name="STBCUTBANK" PropertyType="">
+                      <DefaultValue>
+                        <String>5</String>
+                      </DefaultValue>
+                    </cdm:PropertyMeta>
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+            <FDataClassItem Name="EqpStepTimeType" IsEnum="True">
+              <Content>
+                <DataClassMeta Name="EqpStepTimeType">
+                  <Properties>
+                    <cdm:PropertyMeta Name="DEFAULT" PropertyType="" />
+                    <cdm:PropertyMeta Name="LONG" PropertyType="" />
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+          </Children>
+        </FDataClassFolder>
+      </Enums>
+      <Children Capacity="4">
+        <FDataClassItem Name="RunStateMaster">
+          <Content>
+            <DataClassMeta Name="RunStateMaster">
+              <Properties>
+                <cdm:PropertyMeta Name="Runner" PropertyType="output.JobRunState" />
+                <cdm:PropertyMeta Name="State" PropertyType="RunStateType" />
+              </Properties>
+            </DataClassMeta>
+          </Content>
+        </FDataClassItem>
+        <FDataClassItem Name="DashboardMaster">
+          <Content>
+            <DataClassMeta Name="DashboardMaster">
+              <Properties>
+                <cdm:PropertyMeta Name="RunType" PropertyType="InboudRunType" />
+                <cdm:PropertyMeta Name="ActFixedDate" PropertyType="DateTime">
+                  <DefaultValue>
+                    <String>=DateTime.MinValue</String>
+                  </DefaultValue>
+                </cdm:PropertyMeta>
+                <cdm:PropertyMeta Name="LastInterfaceTime" PropertyType="DateTime">
+                  <DefaultValue>
+                    <String>=DateTime.MinValue</String>
+                  </DefaultValue>
+                </cdm:PropertyMeta>
+                <cdm:PropertyMeta Name="LastLotEventTime" PropertyType="DateTime">
+                  <DefaultValue>
+                    <String>=DateTime.MinValue</String>
+                  </DefaultValue>
+                </cdm:PropertyMeta>
+                <cdm:PropertyMeta Name="CellCodeMaps" PropertyType="Dictionary&lt;string,string&gt;">
+                  <DefaultValue>
+                    <String>=new Dictionary&lt;string,string&gt;()</String>
+                  </DefaultValue>
+                </cdm:PropertyMeta>
+              </Properties>
+            </DataClassMeta>
+          </Content>
+        </FDataClassItem>
+        <FDataClassFolder Name="Items">
+          <Children Capacity="4">
+            <FDataClassItem Name="CodeMapSet">
+              <Content>
+                <DataClassMeta GenerateContainer="True" ContainerType="Dictionary" ContainerKeys="CodeMapType" Name="CodeMapSet">
+                  <Properties>
+                    <cdm:PropertyMeta Name="MapType" PropertyType="CodeMapType" />
+                    <cdm:PropertyMeta Name="Infos" PropertyType="Dictionary&lt;string,List&lt;output.ENG_CELL_CODE_MAP&gt;&gt;">
+                      <DefaultValue>
+                        <String>= new Dictionary&lt;string, List&lt;output.ENG_CELL_CODE_MAP&gt;&gt;()</String>
+                      </DefaultValue>
+                    </cdm:PropertyMeta>
+                  </Properties>
+                </DataClassMeta>
+              </Content>
+            </FDataClassItem>
+          </Children>
+        </FDataClassFolder>
+      </Children>
+    </FDataClassRoot>
+  </Content>
+</vxml:Document>

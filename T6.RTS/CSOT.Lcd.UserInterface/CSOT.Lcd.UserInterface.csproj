@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{599B180C-CEB8-4B08-A2D5-4A060C55FF37}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSOT.Lcd.UserInterface</RootNamespace>
+    <AssemblyName>CSOT.Lcd.UserInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Spreadsheet.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1.UI, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files (x86)\DevExpress 19.1\Components\Bin\Framework\DevExpress.XtraLayout.v19.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="LcdModel.Schema">
+      <HintPath>..\CSOT.Lcd.Scheduling\Generated\LcdModel.Schema.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Common">
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Core">
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Data.Entity">
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Studio">
+      <HintPath>C:\Program Files (x86)\VMS\Mozart\Client\Bin\Mozart.Studio.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Studio.TaskCommon">
+      <HintPath>C:\Program Files (x86)\VMS\Mozart\Client\Bin\Mozart.Studio.TaskCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Studio.TaskModel">
+      <HintPath>C:\Program Files (x86)\VMS\Mozart\Client\Bin\Mozart.Studio.TaskModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Studio.TaskModel.UserLibrary">
+      <HintPath>C:\Program Files (x86)\VMS\Mozart\Client\Bin\Mozart.Studio.TaskModel.UserLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Studio.UIComponents">
+      <HintPath>C:\Program Files (x86)\VMS\Mozart\Client\Bin\Mozart.Studio.UIComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go, Version=4.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\VMS\Mozart\Client\Bin\Northwoods.Go.dll</HintPath>
+    </Reference>
+    <Reference Include="Northwoods.Go.Layout, Version=4.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\VMS\Mozart\Client\Bin\Northwoods.Go.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analysis\BalanceTableView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\BalanceTableView.Designer.cs">
+      <DependentUpon>BalanceTableView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIold\BatchProgressView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIold\BatchProgressView.Designer.cs">
+      <DependentUpon>BatchProgressView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\DispatchingLogView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\DispatchingLogView.Designer.cs">
+      <DependentUpon>DispatchingLogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\DispatchingAnalysisView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\DispatchingAnalysisView.Designer.cs">
+      <DependentUpon>DispatchingAnalysisView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\DispatchingInfoViewPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analysis\DispatchingInfoViewPopup.designer.cs">
+      <DependentUpon>DispatchingInfoViewPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIold\EqpArrProductAnalView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIold\EqpArrProductAnalView.Designer.cs">
+      <DependentUpon>EqpArrProductAnalView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\EqpUtilizationView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\EqpUtilizationView.Designer.cs">
+      <DependentUpon>EqpUtilizationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\EqpUtilizationViewPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analysis\EqpUtilizationViewPopup.Designer.cs">
+      <DependentUpon>EqpUtilizationViewPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\InOutCompareView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\InOutCompareView.Designer.cs">
+      <DependentUpon>InOutCompareView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIold\JobChangePlanView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIold\JobChangePlanView.Designer.cs">
+      <DependentUpon>JobChangePlanView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIold\LoadHistView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIold\LoadHistView.Designer.cs">
+      <DependentUpon>LoadHistView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIold\LotPathInfoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIold\LotPathInfoView.designer.cs">
+      <DependentUpon>LotPathInfoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\ProductRouteView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\ProductRouteView.Designer.cs">
+      <DependentUpon>ProductRouteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIold\ProgressRateView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIold\ProgressRateView.Designer.cs">
+      <DependentUpon>ProgressRateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIold\RunTatCompareView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIold\RunTatCompareView.Designer.cs">
+      <DependentUpon>RunTatCompareView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIold\SimpleGridPopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIold\SimpleGridPopUp.Designer.cs">
+      <DependentUpon>SimpleGridPopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIold\SimulationWipView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIold\SimulationWipView.Designer.cs">
+      <DependentUpon>SimulationWipView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIold\StepMoveCompareView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIold\StepMoveCompareView.Designer.cs">
+      <DependentUpon>StepMoveCompareView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIold\StepMovePopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIold\StepMovePopUp.Designer.cs">
+      <DependentUpon>StepMovePopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\StepMoveView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\StepMoveView.Designer.cs">
+      <DependentUpon>StepMoveView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\LayerBalanceWipView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\LayerBalanceWipView.Designer.cs">
+      <DependentUpon>LayerBalanceWipView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\StepWipView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\StepWipView.Designer.cs">
+      <DependentUpon>StepWipView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\TargetPlanCompareView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\TargetPlanCompareView.Designer.cs">
+      <DependentUpon>TargetPlanCompareView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIold\TatCompareView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIold\TatCompareView.Designer.cs">
+      <DependentUpon>TatCompareView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\ToolUseStateView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\ToolUseStateView.Designer.cs">
+      <DependentUpon>ToolUseStateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIold\WorkOrderView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIold\WorkOrderView.Designer.cs">
+      <DependentUpon>WorkOrderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\StepWipSnapshotView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\StepWipSnapshotView.Designer.cs">
+      <DependentUpon>StepWipSnapshotView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis\ArrangeAnalysisView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Analysis\ArrangeAnalysisView.Designer.cs">
+      <DependentUpon>ArrangeAnalysisView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ColName.cs" />
+    <Compile Include="Common\ComboHelper.cs" />
+    <Compile Include="Common\DataConsts.cs" />
+    <Compile Include="Common\Globals.cs" />
+    <Compile Include="Common\PopUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\PopUpForm.Designer.cs">
+      <DependentUpon>PopUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SchedOut.cs" />
+    <Compile Include="DataMappings\BalanceTableViewData.cs" />
+    <Compile Include="DataMappings\DaData.cs" />
+    <Compile Include="DataMappings\DispatchingInfoData.cs" />
+    <Compile Include="DataMappings\EqpArrProductAnalViewData.cs" />
+    <Compile Include="DataMappings\EqpGanttChartData.cs" />
+    <Compile Include="DataMappings\EuData.cs" />
+    <Compile Include="DataMappings\IocvData.cs" />
+    <Compile Include="DataMappings\JobChangePlanData.cs" />
+    <Compile Include="DataMappings\LotGanttChartData.cs" />
+    <Compile Include="DataMappings\PrvData.cs" />
+    <Compile Include="DataMappings\RtcvData.cs" />
+    <Compile Include="DataMappings\SimInputData.cs" />
+    <Compile Include="DataMappings\SimResultData.cs" />
+    <Compile Include="DataMappings\SmcvData.cs" />
+    <Compile Include="DataMappings\StepMoveData.cs" />
+    <Compile Include="DataMappings\StepWipData.cs" />
+    <Compile Include="DataMappings\SwvData.cs" />
+    <Compile Include="DataMappings\TargetPlanCompareData.cs" />
+    <Compile Include="DataMappings\TcData.cs" />
+    <Compile Include="DataMappings\TgData.cs" />
+    <Compile Include="DataMappings\WoData.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gantts\DetailBarInfoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gantts\DetailBarInfoView.Designer.cs">
+      <DependentUpon>DetailBarInfoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gantts\EqpGantt.cs" />
+    <Compile Include="Gantts\EqpGanttView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gantts\EqpGanttView.designer.cs">
+      <DependentUpon>EqpGanttView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gantts\EqpMaster.cs" />
+    <Compile Include="Gantts\GanttBar.cs" />
+    <Compile Include="Gantts\GanttMaster.cs" />
+    <Compile Include="LotGantts\DetailBarInfoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LotGantts\DetailBarInfoDialog.Designer.cs">
+      <DependentUpon>DetailBarInfoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LotGantts\GanttBar.cs" />
+    <Compile Include="LotGantts\GanttMaster.cs" />
+    <Compile Include="LotGantts\LotGantt.cs" />
+    <Compile Include="LotGantts\LotGanttView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LotGantts\LotGanttView.Designer.cs">
+      <DependentUpon>LotGanttView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CSOTLcdUserInterfacePackage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToolGantts\ToolBarDetailView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolGantts\ToolBarDetailView.Designer.cs">
+      <DependentUpon>ToolBarDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolGantts\ToolBar.cs" />
+    <Compile Include="ToolGantts\ToolGanttMaster.cs" />
+    <Compile Include="ToolGantts\ToolGantt.cs" />
+    <Compile Include="ToolGantts\ToolGanttView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolGantts\ToolGanttView.Designer.cs">
+      <DependentUpon>ToolGanttView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\CheckedComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utils\CheckedComboBox.Designer.cs">
+      <DependentUpon>CheckedComboBox.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CSOT.Lcd.UserInterface.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Analysis\BalanceTableView.resx">
+      <DependentUpon>BalanceTableView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIold\BatchProgressView.resx">
+      <DependentUpon>BatchProgressView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\DispatchingLogView.resx">
+      <DependentUpon>DispatchingLogView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\DispatchingAnalysisView.resx">
+      <DependentUpon>DispatchingAnalysisView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\DispatchingInfoViewPopup.resx">
+      <DependentUpon>DispatchingInfoViewPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIold\EqpArrProductAnalView.resx">
+      <DependentUpon>EqpArrProductAnalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\EqpUtilizationView.resx">
+      <DependentUpon>EqpUtilizationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\EqpUtilizationViewPopup.resx">
+      <DependentUpon>EqpUtilizationViewPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\InOutCompareView.resx">
+      <DependentUpon>InOutCompareView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIold\JobChangePlanView.resx">
+      <DependentUpon>JobChangePlanView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIold\LoadHistView.resx">
+      <DependentUpon>LoadHistView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIold\LotPathInfoView.resx">
+      <DependentUpon>LotPathInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\ProductRouteView.resx">
+      <DependentUpon>ProductRouteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIold\ProgressRateView.resx">
+      <DependentUpon>ProgressRateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIold\RunTatCompareView.resx">
+      <DependentUpon>RunTatCompareView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIold\SimpleGridPopUp.resx">
+      <DependentUpon>SimpleGridPopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIold\SimulationWipView.resx">
+      <DependentUpon>SimulationWipView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIold\StepMoveCompareView.resx">
+      <DependentUpon>StepMoveCompareView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIold\StepMovePopUp.resx">
+      <DependentUpon>StepMovePopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\StepMoveView.resx">
+      <DependentUpon>StepMoveView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\LayerBalanceWipView.resx">
+      <DependentUpon>LayerBalanceWipView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\StepWipView.resx">
+      <DependentUpon>StepWipView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\TargetPlanCompareView.resx">
+      <DependentUpon>TargetPlanCompareView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIold\TatCompareView.resx">
+      <DependentUpon>TatCompareView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\ToolUseStateView.resx">
+      <DependentUpon>ToolUseStateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIold\WorkOrderView.resx">
+      <DependentUpon>WorkOrderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\StepWipSnapshotView.resx">
+      <DependentUpon>StepWipSnapshotView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Analysis\ArrangeAnalysisView.resx">
+      <DependentUpon>ArrangeAnalysisView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\PopUpForm.resx">
+      <DependentUpon>PopUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gantts\DetailBarInfoView.resx">
+      <DependentUpon>DetailBarInfoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gantts\EqpGanttView.resx">
+      <DependentUpon>EqpGanttView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotGantts\DetailBarInfoDialog.resx">
+      <DependentUpon>DetailBarInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LotGantts\LotGanttView.resx">
+      <DependentUpon>LotGanttView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="ToolGantts\ToolBarDetailView.resx">
+      <DependentUpon>ToolBarDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolGantts\ToolGanttView.resx">
+      <DependentUpon>ToolGanttView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\CheckedComboBox.resx">
+      <DependentUpon>CheckedComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Icons.16x16.Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSOT.UserInterface\CSOT.UserInterface.csproj">
+      <Project>{c9435733-d2d9-4b5e-ae43-084bf9486503}</Project>
+      <Name>CSOT.UserInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>set PROCESSOR_ARCHITEW6432
+if ERRORLEVEL 1 GOTO x86
+if NOT ERRORLEVEL 1 GOTO x64
+
+:x86
+xcopy "$(TargetDir)$(ProjectName).*" "C:\Program Files\VMS\Mozart\Client\Bin" /D /C /V /Y /R
+xcopy "$(ProjectDir)CSOT.Lcd.UserInterface.config" "C:\Program Files\VMS\Mozart\Client\Bin" /D /C /V /Y /R
+GOTO end
+
+:x64
+xcopy "$(TargetDir)$(ProjectName).*" "C:\Program Files (x86)\VMS\Mozart\Client\Bin" /D /C /V /Y /R
+xcopy "$(ProjectDir)CSOT.Lcd.UserInterface.config" "C:\Program Files (x86)\VMS\Mozart\Client\Bin" /D /C /V /Y /R
+GOTO end
+
+:end</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

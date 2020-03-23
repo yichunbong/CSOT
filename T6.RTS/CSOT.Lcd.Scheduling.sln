@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSOT.Lcd.Scheduling", "CSOT.Lcd.Scheduling\CSOT.Lcd.Scheduling.csproj", "{1EA45529-4A23-42F4-A7E8-687B4744BCB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSOT.Lcd.UserInterface", "CSOT.Lcd.UserInterface\CSOT.Lcd.UserInterface.csproj", "{599B180C-CEB8-4B08-A2D5-4A060C55FF37}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C9435733-D2D9-4B5E-AE43-084BF9486503} = {C9435733-D2D9-4B5E-AE43-084BF9486503}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSOT.UserInterface", "CSOT.UserInterface\CSOT.UserInterface.csproj", "{C9435733-D2D9-4B5E-AE43-084BF9486503}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EA45529-4A23-42F4-A7E8-687B4744BCB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA45529-4A23-42F4-A7E8-687B4744BCB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA45529-4A23-42F4-A7E8-687B4744BCB5}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1EA45529-4A23-42F4-A7E8-687B4744BCB5}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1EA45529-4A23-42F4-A7E8-687B4744BCB5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1EA45529-4A23-42F4-A7E8-687B4744BCB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA45529-4A23-42F4-A7E8-687B4744BCB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EA45529-4A23-42F4-A7E8-687B4744BCB5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1EA45529-4A23-42F4-A7E8-687B4744BCB5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1EA45529-4A23-42F4-A7E8-687B4744BCB5}.Release|x86.ActiveCfg = Release|Any CPU
+		{599B180C-CEB8-4B08-A2D5-4A060C55FF37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{599B180C-CEB8-4B08-A2D5-4A060C55FF37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{599B180C-CEB8-4B08-A2D5-4A060C55FF37}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{599B180C-CEB8-4B08-A2D5-4A060C55FF37}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{599B180C-CEB8-4B08-A2D5-4A060C55FF37}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{599B180C-CEB8-4B08-A2D5-4A060C55FF37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{599B180C-CEB8-4B08-A2D5-4A060C55FF37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{599B180C-CEB8-4B08-A2D5-4A060C55FF37}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{599B180C-CEB8-4B08-A2D5-4A060C55FF37}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{599B180C-CEB8-4B08-A2D5-4A060C55FF37}.Release|x86.ActiveCfg = Release|Any CPU
+		{C9435733-D2D9-4B5E-AE43-084BF9486503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9435733-D2D9-4B5E-AE43-084BF9486503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9435733-D2D9-4B5E-AE43-084BF9486503}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C9435733-D2D9-4B5E-AE43-084BF9486503}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C9435733-D2D9-4B5E-AE43-084BF9486503}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C9435733-D2D9-4B5E-AE43-084BF9486503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9435733-D2D9-4B5E-AE43-084BF9486503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9435733-D2D9-4B5E-AE43-084BF9486503}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C9435733-D2D9-4B5E-AE43-084BF9486503}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C9435733-D2D9-4B5E-AE43-084BF9486503}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {6196C220-DB99-4AF8-A1A4-985C10E7D747}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.1.10:1620/tfs/domain
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CSOT.Lcd.Scheduling\\CSOT.Lcd.Scheduling.csproj
+		SccProjectName1 = CSOT.Lcd.Scheduling
+		SccLocalPath1 = CSOT.Lcd.Scheduling
+		SccProjectUniqueName2 = CSOT.Lcd.UserInterface\\CSOT.Lcd.UserInterface.csproj
+		SccProjectName2 = CSOT.Lcd.UserInterface
+		SccLocalPath2 = CSOT.Lcd.UserInterface
+		SccProjectUniqueName3 = CSOT.UserInterface\\CSOT.UserInterface.csproj
+		SccProjectName3 = CSOT.UserInterface
+		SccLocalPath3 = CSOT.UserInterface
+	EndGlobalSection
+EndGlobal

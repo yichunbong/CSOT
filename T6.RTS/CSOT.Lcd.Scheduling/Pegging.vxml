@@ -1,0 +1,800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vxml:Document xmlns:vxml="http://www.vms-solutions.com/mozart/vxml/2012/1" xmlns:def="definitions" xmlns:ref="references" ContentType="femap" ContentKey="Pegging/Pegging" xmlns="Mozart.Task.Execution.Design, Version=2019.116.0.61, Culture=neutral, PublicKeyToken=null" xmlns:csd="clr-namespace:Mozart.SeePlan.Design;assembly:Mozart.SeePlan.Design, Version=2019.116.1.24, Culture=neutral, PublicKeyToken=null" xmlns:csd2="clr-namespace:Mozart.SeePlan.Design.Pegging;assembly:Mozart.SeePlan.Design, Version=2019.116.1.24, Culture=neutral, PublicKeyToken=null">
+  <Content>
+    <FActionMap Name="Pegging" InstanceName="Pegging">
+      <Definitions Capacity="16">
+        <FDefinitionCategory Name="-Predefined-">
+          <Children Capacity="3">
+            <FDefinitionEntry Name="COMPARE_PEG_TARGET" def:name="$attr:Name">
+              <ReferenceAction>
+                <FActionEntry Name="ComparePegTarget" def:name="$attr:Name">
+                  <Children Capacity="1">
+                    <FDefinitionReference>
+                      <Definition ref:name="COMPARE_PEG_TARGET" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="CREATE_INNER_BUCKET_DEF" def:name="$attr:Name">
+              <ReferenceAction>
+                <FActionEntry Name="CreateInnerBucket" def:name="$attr:Name">
+                  <Children Capacity="1">
+                    <FDefinitionReference>
+                      <Definition ref:name="CREATE_INNER_BUCKET_DEF" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="CREATE_OUTER_BUCKET_DEF" def:name="$attr:Name">
+              <ReferenceAction>
+                <FActionEntry Name="CreateOuterBucket" def:name="$attr:Name">
+                  <Children Capacity="1">
+                    <FDefinitionReference>
+                      <Definition ref:name="CREATE_OUTER_BUCKET_DEF" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+          </Children>
+        </FDefinitionCategory>
+        <FDefinitionCategory Name="Fab">
+          <Children Capacity="4">
+            <FDefinitionEntry Name="COMPAREPEGTARGET" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\Fab" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="Fab" MethodName="COMPAREPEGTARGET" />
+              </Code>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="GETLASTPEGGINGSTEP" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\Fab" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="Fab" MethodName="GETLASTPEGGINGSTEP" />
+              </Code>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="GETPREVPEGGINGSTEP" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\Fab" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="Fab" MethodName="GETPREVPEGGINGSTEP" />
+              </Code>
+            </FDefinitionEntry>
+          </Children>
+        </FDefinitionCategory>
+        <FDefinitionCategory Name="PREPARE_WIP">
+          <Children Capacity="4">
+            <FDefinitionEntry Name="PREPARE_WIP0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\PREPARE_WIP" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="PREPARE_WIP" MethodName="PREPARE_WIP0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="PrepareWip" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="PREPARE_WIP0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+          </Children>
+        </FDefinitionCategory>
+        <FDefinitionCategory Name="PREPARE_TARGET">
+          <Children Capacity="4">
+            <FDefinitionEntry Name="PREPARE_TARGET0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\PREPARE_TARGET" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="PREPARE_TARGET" MethodName="PREPARE_TARGET0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="PrepareTarget" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="PREPARE_TARGET0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+          </Children>
+        </FDefinitionCategory>
+        <FDefinitionCategory Name="PEG_WIP">
+          <Children Capacity="8">
+            <FDefinitionEntry Name="AVAIL_PEG_QTY0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\PEG_WIP" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="PEG_WIP" MethodName="AVAIL_PEG_QTY0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="AvailPegQty" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="AVAIL_PEG_QTY0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="CAN_PEG_MORE0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\PEG_WIP" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="PEG_WIP" MethodName="CAN_PEG_MORE0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="CanPegMore" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="CAN_PEG_MORE0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="GET_WIPS0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\PEG_WIP" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="PEG_WIP" MethodName="GET_WIPS0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="GetWips" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="GET_WIPS0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="IS_REMOVE_EMPTY_TARGET0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\PEG_WIP" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="PEG_WIP" MethodName="IS_REMOVE_EMPTY_TARGET0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="IsRemoveEmptyTarget" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="IS_REMOVE_EMPTY_TARGET0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="SORT_WIP0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\PEG_WIP" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="PEG_WIP" MethodName="SORT_WIP0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="SortWip" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="SORT_WIP0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="WRITE_PEG0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\PEG_WIP" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="PEG_WIP" MethodName="WRITE_PEG0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="WritePeg" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="WRITE_PEG0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+          </Children>
+        </FDefinitionCategory>
+        <FDefinitionCategory Name="WRITE_TARGET">
+          <Children Capacity="4">
+            <FDefinitionEntry Name="CREATE_STEP_TARGET0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\WRITE_TARGET" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="WRITE_TARGET" MethodName="CREATE_STEP_TARGET0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="CreateStepTarget" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="CREATE_STEP_TARGET0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="GET_STEP_PLAN_KEY0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\WRITE_TARGET" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="WRITE_TARGET" MethodName="GET_STEP_PLAN_KEY0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="GetStepPlanKey" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="GET_STEP_PLAN_KEY0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="WRITE_TARGET0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\WRITE_TARGET" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="WRITE_TARGET" MethodName="WRITE_TARGET0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="WriteTarget" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="WRITE_TARGET0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+          </Children>
+        </FDefinitionCategory>
+        <FDefinitionCategory Name="BUILD_INPLAN">
+          <Children Capacity="4">
+            <FDefinitionEntry Name="BUILD_IN_PLAN0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\BUILD_INPLAN" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="BUILD_INPLAN" MethodName="BUILD_IN_PLAN0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="BuildInPlan" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="BUILD_IN_PLAN0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+          </Children>
+        </FDefinitionCategory>
+        <FDefinitionCategory Name="WRITE_UNPEG">
+          <Children Capacity="4">
+            <FDefinitionEntry Name="WRITE_UNPEG0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\WRITE_UNPEG" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="WRITE_UNPEG" MethodName="WRITE_UNPEG0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="WriteUnpeg" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="WRITE_UNPEG0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+          </Children>
+        </FDefinitionCategory>
+        <FDefinitionCategory Name="SHIFT_TAT">
+          <Children Capacity="4">
+            <FDefinitionEntry Name="GET_TARGET_TAT0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\SHIFT_TAT" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="SHIFT_TAT" MethodName="GET_TARGET_TAT0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="GetTargetTat" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="GET_TARGET_TAT0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="UPDATE_TAT_INFO0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\SHIFT_TAT" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="SHIFT_TAT" MethodName="UPDATE_TAT_INFO0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="UpdateTatInfo" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="UPDATE_TAT_INFO0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="USE_TARGET_TAT0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\SHIFT_TAT" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="SHIFT_TAT" MethodName="USE_TARGET_TAT0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="UseTargetTat" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="USE_TARGET_TAT0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+          </Children>
+        </FDefinitionCategory>
+        <FDefinitionCategory Name="Rules">
+          <Children Capacity="8">
+            <FDefinitionEntry Name="CELL_BANK_PEG" Description="">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\Rules" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="Rules" MethodName="CELL_BANK_PEG" />
+              </Code>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="CELL_BANK_PREPARE" Description="" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\Rules" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="Rules" MethodName="CELL_BANK_PREPARE" />
+              </Code>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="CELL_PART_CHANGE" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\Rules" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="Rules" MethodName="CELL_PART_CHANGE" />
+              </Code>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="CELL_POST" Description="" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\Rules" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="Rules" MethodName="CELL_POST" />
+              </Code>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="WRITE_LOADED_DEMAND" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\Rules" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="Rules" MethodName="WRITE_LOADED_DEMAND" />
+              </Code>
+            </FDefinitionEntry>
+          </Children>
+        </FDefinitionCategory>
+        <FDefinitionCategory Name="CHANGE_PART">
+          <Children Capacity="4">
+            <FDefinitionEntry Name="APPLY_PART_CHANGE_INFO0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\CHANGE_PART" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="CHANGE_PART" MethodName="APPLY_PART_CHANGE_INFO0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="ApplyPartChangeInfo" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="APPLY_PART_CHANGE_INFO0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="GET_PART_CHANGE_INFOS0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\CHANGE_PART" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="CHANGE_PART" MethodName="GET_PART_CHANGE_INFOS0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="GetPartChangeInfos" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="GET_PART_CHANGE_INFOS0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+          </Children>
+        </FDefinitionCategory>
+        <FDefinitionCategory Name="APPLY_YIELD">
+          <Children Capacity="4">
+            <FDefinitionEntry Name="GET_YIELD0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\APPLY_YIELD" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="APPLY_YIELD" MethodName="GET_YIELD0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="GetYield" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="GET_YIELD0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="ROUND_RESULT0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\APPLY_YIELD" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="APPLY_YIELD" MethodName="ROUND_RESULT0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="RoundResult" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="ROUND_RESULT0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="USE_TARGET_YIELD0" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\APPLY_YIELD" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="APPLY_YIELD" MethodName="USE_TARGET_YIELD0" />
+              </Code>
+              <ReferenceAction>
+                <FActionEntry Name="UseTargetYield" def:name="$attr:Name">
+                  <Children Capacity="4">
+                    <FDefinitionReference>
+                      <Definition ref:name="USE_TARGET_YIELD0" />
+                    </FDefinitionReference>
+                  </Children>
+                </FActionEntry>
+              </ReferenceAction>
+            </FDefinitionEntry>
+          </Children>
+        </FDefinitionCategory>
+        <FDefinitionCategory Name="APPLY_ACT" />
+        <FDefinitionCategory Name="Cell">
+          <Children Capacity="4">
+            <FDefinitionEntry Name="COMPAREPEGPART" def:name="$attr:Name">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\Cell" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="Cell" MethodName="COMPAREPEGPART" />
+              </Code>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="COMPAREPEGTARGET" def:name="COMPAREPEGTARGET1">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\Cell" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="Cell" MethodName="COMPAREPEGTARGET" />
+              </Code>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="GETLASTPEGGINGSTEP" def:name="GETLASTPEGGINGSTEP1">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\Cell" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="Cell" MethodName="GETLASTPEGGINGSTEP" />
+              </Code>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="GETPREVPEGGINGSTEP" def:name="GETPREVPEGGINGSTEP1">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\Cell" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="Cell" MethodName="GETPREVPEGGINGSTEP" />
+              </Code>
+            </FDefinitionEntry>
+          </Children>
+        </FDefinitionCategory>
+        <FDefinitionCategory Name="CellBank">
+          <Children Capacity="4">
+            <FDefinitionEntry Name="GETLASTPEGGINGSTEP" Description="" def:name="GETLASTPEGGINGSTEP2">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\CellBank" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="CellBank" MethodName="GETLASTPEGGINGSTEP" />
+              </Code>
+            </FDefinitionEntry>
+            <FDefinitionEntry Name="GETPREVPEGGINGSTEP" Description="" def:name="GETPREVPEGGINGSTEP2">
+              <Code>
+                <CodeInfo Path="Logic\Pegging\CellBank" NamespaceName="CSOT.Lcd.Scheduling.Logic.Pegging" ClassName="CellBank" MethodName="GETPREVPEGGINGSTEP" />
+              </Code>
+            </FDefinitionEntry>
+          </Children>
+        </FDefinitionCategory>
+      </Definitions>
+      <Children Capacity="4">
+        <FActionCategory Name="Pegger">
+          <Children Capacity="2">
+            <FActionComponent Name="ModelRun">
+              <Option />
+              <Children Capacity="10">
+                <FActionEntry ref:name="ComparePegTarget" />
+              </Children>
+            </FActionComponent>
+          </Children>
+        </FActionCategory>
+        <FCustomEntry Name="Rules">
+          <Children Capacity="32">
+            <csd:PredefinedPegRule Name="APPLY_ACT" Description="APPLY_ACT">
+              <Children Capacity="4" />
+            </csd:PredefinedPegRule>
+            <csd:PredefinedPegRule Name="APPLY_YIELD" Description="APPLY_YIELD">
+              <Children Capacity="8">
+                <FActionEntry ref:name="GetYield" />
+                <FActionEntry ref:name="UseTargetYield" />
+                <FActionEntry ref:name="RoundResult" />
+              </Children>
+            </csd:PredefinedPegRule>
+            <csd:PredefinedPegRule Name="BIN_BUFFER" Description="BIN_BUFFER">
+              <Children Capacity="16" />
+            </csd:PredefinedPegRule>
+            <csd:PredefinedPegRule Name="BUILD_INPLAN" Description="BUILD_INPLAN">
+              <Children Capacity="4">
+                <FActionEntry ref:name="BuildInPlan" />
+              </Children>
+            </csd:PredefinedPegRule>
+            <csd:PredefinedPegRule Name="CHANGE_PART" Description="CHANGE_PART">
+              <Children Capacity="4">
+                <FActionEntry ref:name="GetPartChangeInfos" />
+                <FActionEntry ref:name="ApplyPartChangeInfo" />
+              </Children>
+            </csd:PredefinedPegRule>
+            <csd:PredefinedPegRule Name="FILTER_TARGET" Description="FILTER_TARGET">
+              <Children Capacity="4" />
+            </csd:PredefinedPegRule>
+            <csd:PredefinedPegRule Name="MANIPULATE_DEMAND" Description="MANIPULATE_DEMAND">
+              <Children Capacity="4" />
+            </csd:PredefinedPegRule>
+            <csd:PredefinedPegRule Name="PEG_WIP" Description="PEG_WIP">
+              <Children Capacity="8">
+                <FActionEntry ref:name="GetWips" />
+                <FActionEntry ref:name="SortWip" />
+                <FActionEntry ref:name="CanPegMore" />
+                <FActionEntry ref:name="AvailPegQty" />
+                <FActionEntry ref:name="WritePeg" />
+                <FActionEntry ref:name="IsRemoveEmptyTarget" />
+              </Children>
+            </csd:PredefinedPegRule>
+            <csd:PredefinedPegRule Name="PREPARE_TARGET" Description="PREPARE_TARGET">
+              <Children Capacity="4">
+                <FActionEntry ref:name="PrepareTarget" />
+              </Children>
+            </csd:PredefinedPegRule>
+            <csd:PredefinedPegRule Name="PREPARE_WIP" Description="PREPARE_WIP">
+              <Children Capacity="4">
+                <FActionEntry ref:name="PrepareWip" />
+              </Children>
+            </csd:PredefinedPegRule>
+            <csd:PredefinedPegRule Name="SHIFT_TAT" Description="SHIFT_TAT">
+              <Children Capacity="4">
+                <FActionEntry ref:name="UseTargetTat" />
+                <FActionEntry ref:name="GetTargetTat" />
+                <FActionEntry ref:name="UpdateTatInfo" />
+              </Children>
+            </csd:PredefinedPegRule>
+            <csd:PredefinedPegRule Name="SMOOTH_DEMAND" Description="SMOOTH_DEMAND">
+              <Children Capacity="8">
+                <FActionEntry ref:name="CreateInnerBucket" />
+                <FActionEntry ref:name="CreateOuterBucket" />
+              </Children>
+            </csd:PredefinedPegRule>
+            <csd:PredefinedPegRule Name="WRITE_TARGET" Description="WRITE_TARGET">
+              <Children Capacity="4">
+                <FActionEntry ref:name="WriteTarget" />
+                <FActionEntry ref:name="GetStepPlanKey" />
+                <FActionEntry ref:name="CreateStepTarget" />
+              </Children>
+            </csd:PredefinedPegRule>
+            <csd:PredefinedPegRule Name="WRITE_UNPEG" Description="WRITE_UNPEG">
+              <Children Capacity="4">
+                <FActionEntry ref:name="WriteUnpeg" />
+              </Children>
+            </csd:PredefinedPegRule>
+            <csd:PegRuleInstance>
+              <Definition ref:name="CELL_PART_CHANGE" />
+            </csd:PegRuleInstance>
+            <csd:PegRuleInstance>
+              <Definition ref:name="CELL_POST" />
+            </csd:PegRuleInstance>
+            <csd:PegRuleInstance>
+              <Definition ref:name="WRITE_LOADED_DEMAND" />
+            </csd:PegRuleInstance>
+            <csd:PegRuleInstance>
+              <Definition ref:name="CELL_BANK_PREPARE" />
+            </csd:PegRuleInstance>
+          </Children>
+        </FCustomEntry>
+        <FCustomEntry Name="Stages">
+          <Children Capacity="16">
+            <csd:PegStageInstance Name="InitStage">
+              <Option />
+              <Children Capacity="4">
+                <FPredefinedReference Name="PREPARE_TARGET" InstanceName="PREPARE_TARGET" Description="Prepare stage target" />
+              </Children>
+            </csd:PegStageInstance>
+            <csd:PegStageInstance Name="RunStage">
+              <Option>
+                <Values>
+                  <Entry>
+                    <String>IsRun</String>
+                    <Boolean>True</Boolean>
+                  </Entry>
+                </Values>
+              </Option>
+              <Children Capacity="8">
+                <FPredefinedReference Name="WRITE_TARGET" InstanceName="WRITE_TARGET" Description="Write target" />
+                <FPredefinedReference Name="APPLY_YIELD" InstanceName="APPLY_YIELD" Description="Apply yield" />
+                <FPredefinedReference Name="PEG_WIP" InstanceName="PEG_WIP" Description="Pegging wip" />
+                <FPredefinedReference Name="SHIFT_TAT" InstanceName="SHIFT_TAT" Description="Apply tat" />
+                <FPredefinedReference Name="CHANGE_PART" InstanceName="CHANGE_PART" Description="Change part" />
+              </Children>
+            </csd:PegStageInstance>
+            <csd:PegStageInstance Name="WaitStage">
+              <Option>
+                <Values>
+                  <Entry>
+                    <String>IsRun</String>
+                    <Boolean>False</Boolean>
+                  </Entry>
+                </Values>
+              </Option>
+              <Children Capacity="4">
+                <FPredefinedReference Name="WRITE_TARGET" InstanceName="WRITE_TARGET" Description="Write target" />
+                <FPredefinedReference Name="PEG_WIP" InstanceName="PEG_WIP" Description="Pegging wip" />
+                <FPredefinedReference Name="SHIFT_TAT" InstanceName="SHIFT_TAT" Description="Apply tat" />
+                <FPredefinedReference Name="CHANGE_PART" InstanceName="CHANGE_PART" Description="Change part" />
+              </Children>
+            </csd:PegStageInstance>
+            <csd:PegStageInstance Name="PostStage">
+              <Option />
+              <Children Capacity="4">
+                <csd:PegRuleReference InstanceName="WRITE_LOADED_DEMAND">
+                  <Definition ref:name="WRITE_LOADED_DEMAND" />
+                </csd:PegRuleReference>
+                <FPredefinedReference Name="WRITE_UNPEG" InstanceName="WRITE_UNPEG" Description="Write unpeg" />
+                <FPredefinedReference Name="BUILD_INPLAN" InstanceName="BUILD_INPLAN" Description="Build InPlan from Target for input step" />
+              </Children>
+            </csd:PegStageInstance>
+            <csd:PegStageInstance Name="CellPreStage">
+              <Option />
+              <Children Capacity="4">
+                <FPredefinedReference Name="PREPARE_TARGET" InstanceName="PREPARE_TARGET" Description="Prepare stage target" />
+                <FPredefinedReference Name="PREPARE_WIP" InstanceName="PREPARE_WIP" Description="Prepare target wip" />
+              </Children>
+            </csd:PegStageInstance>
+            <csd:PegStageInstance Name="CellPostStage" Description="">
+              <Option />
+              <Children Capacity="4">
+                <csd:PegRuleReference InstanceName="CELL_POST">
+                  <Definition ref:name="CELL_POST" />
+                </csd:PegRuleReference>
+              </Children>
+            </csd:PegStageInstance>
+            <csd:PegStageInstance Name="CellRunStage">
+              <Option />
+              <Children Capacity="4">
+                <csd:PegRuleReference InstanceName="CELL_PART_CHANGE">
+                  <Definition ref:name="CELL_PART_CHANGE" />
+                </csd:PegRuleReference>
+              </Children>
+            </csd:PegStageInstance>
+            <csd:PegStageInstance Name="CellBankPrePare" Description="">
+              <Option />
+              <Children Capacity="4">
+                <FPredefinedReference Name="BUILD_INPLAN" InstanceName="BUILD_INPLAN" Description="Build InPlan from Target for input step" />
+                <csd:PegRuleReference InstanceName="CELL_BANK_PREPARE">
+                  <Definition ref:name="CELL_BANK_PREPARE" />
+                </csd:PegRuleReference>
+              </Children>
+            </csd:PegStageInstance>
+            <csd:PegStageInstance Name="CellBankStage" Description="">
+              <Option />
+              <Children Capacity="4">
+                <FPredefinedReference Name="PEG_WIP" InstanceName="PEG_WIP" Description="Pegging wip" />
+                <FPredefinedReference Name="WRITE_TARGET" InstanceName="WRITE_TARGET" Description="Write target" />
+              </Children>
+            </csd:PegStageInstance>
+          </Children>
+        </FCustomEntry>
+        <FCustomEntry Name="Models">
+          <Children Capacity="4">
+            <csd2:FPeggerModel Name="Pegger" IsActive="True">
+              <Children Capacity="4">
+                <csd2:FPeggerArea Name="Start" AreaType="Stock" def:name="$attr:Name" Order="1">
+                  <Nexts Capacity="1">
+                    <csd2:FPeggerArea Name="CELL" AreaType="Normal" def:name="$attr:Name" Order="2">
+                      <Nexts Capacity="1">
+                        <csd2:FPeggerArea Name="LCD" AreaType="Normal" Order="3" def:name="$attr:Name">
+                          <Prevs Capacity="1">
+                            <csd2:FPeggerArea ref:name="CELL" />
+                          </Prevs>
+                          <Children Capacity="4">
+                            <csd2:FPeggerNode Name="PreProcess" Order="1">
+                              <FixedFunctions Capacity="3">
+                                <csd2:FPeggerFunc Name="ComparePegPart" FuncType="Comparer" />
+                                <csd2:FPeggerFunc Name="OnBeginFlow" FuncType="OnBeginFlow" />
+                                <csd2:FPeggerFunc Name="OnEndFlow" FuncType="OnEndFlow" />
+                              </FixedFunctions>
+                              <Children Capacity="4">
+                                <csd2:FPeggerStage Name="InitStage" StageTemplateName="InitStage" Order="1" />
+                              </Children>
+                            </csd2:FPeggerNode>
+                            <csd2:FPeggerNode Name="Fab" IsProcessFlow="True" Order="2">
+                              <FixedFunctions Capacity="5">
+                                <csd2:FPeggerFunc Name="ComparePegPart" FuncType="Comparer" />
+                                <csd2:FPeggerFunc Name="ComparePegTarget" FuncType="TargetComparer">
+                                  <Method ref:name="COMPAREPEGTARGET" />
+                                </csd2:FPeggerFunc>
+                                <csd2:FPeggerFunc Name="CompareAlign" FuncType="CompareAlign" />
+                                <csd2:FPeggerFunc Name="OnBeginFlow" FuncType="OnBeginFlow" />
+                                <csd2:FPeggerFunc Name="OnEndFlow" FuncType="OnEndFlow" />
+                              </FixedFunctions>
+                              <Children Capacity="4">
+                                <csd2:FPeggerFunc Name="GetLastPeggingStep" FuncType="LastStep" Order="1">
+                                  <Method ref:name="GETLASTPEGGINGSTEP" />
+                                </csd2:FPeggerFunc>
+                                <csd2:FPeggerStage Name="RunStage" StageTemplateName="RunStage" Order="2" />
+                                <csd2:FPeggerStage Name="WaitStage" StageTemplateName="WaitStage" Order="3" />
+                                <csd2:FPeggerFunc Name="GetPrevPeggingStep" FuncType="PrevStep" Order="4">
+                                  <Method ref:name="GETPREVPEGGINGSTEP" />
+                                </csd2:FPeggerFunc>
+                              </Children>
+                            </csd2:FPeggerNode>
+                            <csd2:FPeggerNode Name="PostProcess" Order="3">
+                              <FixedFunctions Capacity="3">
+                                <csd2:FPeggerFunc Name="ComparePegPart" FuncType="Comparer" />
+                                <csd2:FPeggerFunc Name="OnBeginFlow" FuncType="OnBeginFlow" />
+                                <csd2:FPeggerFunc Name="OnEndFlow" FuncType="OnEndFlow" />
+                              </FixedFunctions>
+                              <Children Capacity="4">
+                                <csd2:FPeggerStage Name="PostStage" StageTemplateName="PostStage" Order="1" />
+                              </Children>
+                            </csd2:FPeggerNode>
+                          </Children>
+                        </csd2:FPeggerArea>
+                      </Nexts>
+                      <Prevs Capacity="1">
+                        <csd2:FPeggerArea ref:name="Start" />
+                      </Prevs>
+                      <Children Capacity="8">
+                        <csd2:FPeggerNode Name="CellPre" Order="1">
+                          <FixedFunctions Capacity="3">
+                            <csd2:FPeggerFunc Name="ComparePegPart" FuncType="Comparer" />
+                            <csd2:FPeggerFunc Name="OnBeginFlow" FuncType="OnBeginFlow" />
+                            <csd2:FPeggerFunc Name="OnEndFlow" FuncType="OnEndFlow" />
+                          </FixedFunctions>
+                          <Children Capacity="4">
+                            <csd2:FPeggerStage Name="CellPreStage" StageTemplateName="CellPreStage" Order="1" />
+                          </Children>
+                        </csd2:FPeggerNode>
+                        <csd2:FPeggerNode Name="Cell" IsProcessFlow="True" Order="2">
+                          <FixedFunctions Capacity="5">
+                            <csd2:FPeggerFunc Name="ComparePegPart" FuncType="Comparer">
+                              <Method ref:name="COMPAREPEGPART" />
+                            </csd2:FPeggerFunc>
+                            <csd2:FPeggerFunc Name="ComparePegTarget" FuncType="TargetComparer">
+                              <Method ref:name="COMPAREPEGTARGET1" />
+                            </csd2:FPeggerFunc>
+                            <csd2:FPeggerFunc Name="CompareAlign" FuncType="CompareAlign" />
+                            <csd2:FPeggerFunc Name="OnBeginFlow" FuncType="OnBeginFlow" />
+                            <csd2:FPeggerFunc Name="OnEndFlow" FuncType="OnEndFlow" />
+                          </FixedFunctions>
+                          <Children Capacity="4">
+                            <csd2:FPeggerFunc Name="GetLastPeggingStep" FuncType="LastStep" Order="1">
+                              <Method ref:name="GETLASTPEGGINGSTEP1" />
+                            </csd2:FPeggerFunc>
+                            <csd2:FPeggerStage Name="RunStage" StageTemplateName="RunStage" Order="2" />
+                            <csd2:FPeggerStage Name="WaitStage" StageTemplateName="WaitStage" Order="3" />
+                            <csd2:FPeggerFunc Name="GetPrevPeggingStep" FuncType="PrevStep" Order="4">
+                              <Method ref:name="GETPREVPEGGINGSTEP1" />
+                            </csd2:FPeggerFunc>
+                          </Children>
+                        </csd2:FPeggerNode>
+                        <csd2:FPeggerNode Name="CellBankPre" Order="3">
+                          <FixedFunctions Capacity="3">
+                            <csd2:FPeggerFunc Name="ComparePegPart" FuncType="Comparer" />
+                            <csd2:FPeggerFunc Name="OnBeginFlow" FuncType="OnBeginFlow" />
+                            <csd2:FPeggerFunc Name="OnEndFlow" FuncType="OnEndFlow" />
+                          </FixedFunctions>
+                          <Children Capacity="4">
+                            <csd2:FPeggerStage Name="CellBankPrePare" StageTemplateName="CellBankPrePare" Order="1" />
+                          </Children>
+                        </csd2:FPeggerNode>
+                        <csd2:FPeggerNode Name="CellBank" IsProcessFlow="True" Order="4">
+                          <FixedFunctions Capacity="5">
+                            <csd2:FPeggerFunc Name="ComparePegPart" FuncType="Comparer" />
+                            <csd2:FPeggerFunc Name="ComparePegTarget" FuncType="TargetComparer" />
+                            <csd2:FPeggerFunc Name="CompareAlign" FuncType="CompareAlign" />
+                            <csd2:FPeggerFunc Name="OnBeginFlow" FuncType="OnBeginFlow" />
+                            <csd2:FPeggerFunc Name="OnEndFlow" FuncType="OnEndFlow" />
+                          </FixedFunctions>
+                          <Children Capacity="4">
+                            <csd2:FPeggerFunc Name="GetLastPeggingStep" FuncType="LastStep" Order="1">
+                              <Method ref:name="GETLASTPEGGINGSTEP2" />
+                            </csd2:FPeggerFunc>
+                            <csd2:FPeggerStage Name="CellBankStage" StageTemplateName="CellBankStage" Order="2" />
+                            <csd2:FPeggerFunc Name="GetPrevPeggingStep" FuncType="PrevStep" Order="3">
+                              <Method ref:name="GETPREVPEGGINGSTEP2" />
+                            </csd2:FPeggerFunc>
+                          </Children>
+                        </csd2:FPeggerNode>
+                        <csd2:FPeggerNode Name="CellPost" Order="5">
+                          <FixedFunctions Capacity="3">
+                            <csd2:FPeggerFunc Name="ComparePegPart" FuncType="Comparer" />
+                            <csd2:FPeggerFunc Name="OnBeginFlow" FuncType="OnBeginFlow" />
+                            <csd2:FPeggerFunc Name="OnEndFlow" FuncType="OnEndFlow" />
+                          </FixedFunctions>
+                          <Children Capacity="4">
+                            <csd2:FPeggerStage Name="CellPostStage" StageTemplateName="CellPostStage" Order="1" />
+                          </Children>
+                        </csd2:FPeggerNode>
+                      </Children>
+                    </csd2:FPeggerArea>
+                  </Nexts>
+                </csd2:FPeggerArea>
+                <csd2:FPeggerArea ref:name="CELL" />
+                <csd2:FPeggerArea ref:name="LCD" />
+              </Children>
+            </csd2:FPeggerModel>
+          </Children>
+        </FCustomEntry>
+      </Children>
+    </FActionMap>
+  </Content>
+</vxml:Document>

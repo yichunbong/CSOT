@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{ACF14516-A304-4AE5-93E6-F8E1F03CF242};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{9AB5EF2E-6B8C-47B7-9954-C2A0A22ECE7E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSOT.RTS.Inbound</RootNamespace>
+    <AssemblyName>CSOT.RTS.Inbound</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <MozartBaseLibrary>Basic</MozartBaseLibrary>
+    <MozartProjectPrefix>RTS</MozartProjectPrefix>
+    <MozartLicType>APS</MozartLicType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <MozartGenerateProfiling>False</MozartGenerateProfiling>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Program Files (x86)\VMS\Mozart\Bin\APS_Studio.exe</StartProgram>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mozart.SeePlan, Version=2019.115.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.SeePlan.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Mozart.Common">
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Core">
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Data">
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Data.Entity">
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.DataActions">
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.DataActions.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Distributions">
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Distributions.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Task.Framework">
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Task.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Task.Execution">
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Task.Execution.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Generated\Main.0.cs" />
+    <Compile Include="Generated\My Objects.0.cs" />
+    <Compile Include="Generated\My Objects.DataModel.cs" />
+    <Compile Include="Generated\T6_Inbound.0.cs" />
+    <Compile Include="Generated\T6_Inbound.Inputs.cs" />
+    <Compile Include="Generated\T6_Inbound.Outputs.cs" />
+    <Compile Include="Generated\T6_Inbound.Persists.cs" />
+    <Compile Include="Logic\Main.cs" />
+    <Compile Include="Logic\PersistInputs.cs" />
+    <Compile Include="Logic\PersistOutputs.cs" />
+    <Compile Include="Main.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main.vxml</DependentUpon>
+    </Compile>
+    <Compile Include="My Methods\ConfigHelper.cs" />
+    <Compile Include="My Methods\DashboardMasterFunc.cs" />
+    <Compile Include="My Methods\DataVaildHelper.cs" />
+    <Compile Include="My Methods\Items\CodeMapSetFunc.cs" />
+    <Compile Include="My Methods\MainHelper.cs" />
+    <Compile Include="My Methods\RunStateMasterFunc.cs" />
+    <Compile Include="My Methods\LcdHelper.cs" />
+    <Compile Include="My Methods\ShiftTimeHelper.cs" />
+    <Compile Include="T6_Inbound.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>T6_Inbound.vxml</DependentUpon>
+    </Compile>
+    <None Include="Main.vxml">
+      <Generator>MozartCode</Generator>
+      <LastGenOutput>Main.cs</LastGenOutput>
+    </None>
+    <Compile Include="My Objects.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>My Objects.vxml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="My Objects.vxml">
+      <Generator>MozartCode</Generator>
+      <LastGenOutput>My Objects.cs</LastGenOutput>
+    </None>
+    <None Include="T6_Inbound.vxml">
+      <Generator>MozartCode</Generator>
+      <LastGenOutput>T6_Inbound.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>set PROCESSOR_ARCHITEW6432
+if ERRORLEVEL 1 GOTO x86
+if NOT ERRORLEVEL 1 GOTO x64
+
+:x86
+xcopy "$(TargetDir)$(ProjectName).*" "C:\Program Files\VMS\Mozart\Client\Bin\" /D /C /V /Y /R
+xcopy "$(TargetDir)$(ProjectName).*" "C:\Project\UPDATE_BIN\" /D /C /V /Y /R
+xcopy "$(ProjectDir)Generated\*.vmodel" "C:\Project\UPDATE_BIN\" /D /C /V /Y /R
+GOTO end
+
+:x64
+xcopy "$(TargetDir)$(ProjectName).*" "C:\Program Files (x86)\VMS\Mozart\Client\Bin\" /D /C /V /Y /R
+xcopy "$(TargetDir)$(ProjectName).*" "C:\Project\UPDATE_BIN\" /D /C /V /Y /R
+xcopy "$(ProjectDir)Generated\*.vmodel" "C:\Project\UPDATE_BIN\" /D /C /V /Y /R
+GOTO end
+
+:end</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

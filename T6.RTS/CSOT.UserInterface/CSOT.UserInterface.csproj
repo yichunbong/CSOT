@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9435733-D2D9-4B5E-AE43-084BF9486503}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSOT.UserInterface</RootNamespace>
+    <AssemblyName>CSOT.UserInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1.UI, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpreadsheet.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Mozart.Common, Version=2019.115.100.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Core, Version=2019.115.100.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Data, Version=2019.115.100.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Data.Entity, Version=2019.115.100.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.DataActions, Version=2019.115.100.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.DataActions.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.SeePlan, Version=2019.115.100.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\ProgramData\Mozart\Execution\Bin\Mozart.SeePlan.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Studio, Version=2019.115.100.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\VMS\Mozart\Client\Bin\Mozart.Studio.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Studio.TaskCommon, Version=2019.115.100.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\VMS\Mozart\Client\Bin\Mozart.Studio.TaskCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Studio.TaskModel, Version=2019.115.100.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\VMS\Mozart\Client\Bin\Mozart.Studio.TaskModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Studio.TaskModel.UserLibrary, Version=2019.115.100.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\VMS\Mozart\Client\Bin\Mozart.Studio.TaskModel.UserLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Mozart.Task.Model, Version=2019.115.100.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\VMS\Mozart\Client\Bin\Mozart.Task.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ViewSchemas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\ViewSchemas.Designer.cs">
+      <DependentUpon>ViewSchemas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponentFactory\ExportProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIComponentFactory\ExportProgressDialog.Designer.cs">
+      <DependentUpon>ExportProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIComponentFactory\GridControlFactory.cs" />
+    <Compile Include="Extensions\EntityExtensions.cs" />
+    <Compile Include="CSOTUserInterfacePackage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\ViewDataActions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\ViewDataActions.Designer.cs">
+      <DependentUpon>ViewDataActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ViewDataBases.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\ViewDataBases.Designer.cs">
+      <DependentUpon>ViewDataBases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ColorGenHelper.cs" />
+    <Compile Include="Utils\ComboBindHelper.cs" />
+    <Compile Include="Utils\CommonHelper.cs" />
+    <Compile Include="Utils\Consts.cs" />
+    <Compile Include="Utils\ConvertHelper.cs" />
+    <Compile Include="Utils\DateHelper.cs" />
+    <Compile Include="Utils\PivotGridHelper.cs" />
+    <Compile Include="Utils\ShopCalendarLoader.cs" />
+    <Compile Include="Utils\StringHelper.cs" />
+    <Compile Include="Utils\WeekHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_UserInterface.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ViewSchemas.resx">
+      <DependentUpon>ViewSchemas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ViewDataActions.resx">
+      <DependentUpon>ViewDataActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\ViewDataBases.resx">
+      <DependentUpon>ViewDataBases.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>set PROCESSOR_ARCHITEW6432
+if ERRORLEVEL 1 GOTO x86
+if NOT ERRORLEVEL 1 GOTO x64
+
+:x86
+xcopy "$(TargetDir)$(ProjectName).*" "C:\Program Files\VMS\Mozart\Client\Bin" /D /C /V /Y /R
+xcopy "$(ProjectDir)App_UserInterface.config" "C:\Program Files\VMS\Mozart\Client\Bin" /D /C /V /Y /R
+GOTO end
+
+:x64
+xcopy "$(TargetDir)$(ProjectName).*" "C:\Program Files (x86)\VMS\Mozart\Client\Bin" /D /C /V /Y /R
+xcopy "$(ProjectDir)App_UserInterface.config" "C:\Program Files (x86)\VMS\Mozart\Client\Bin" /D /C /V /Y /R
+GOTO end
+
+:end</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
